@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">ボタン</button>
+    <div id="result"></div>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+<script>
+    $("#btn").on("click", function(e) {
+        const omikuji = Math.floor(Math.random() * 3);
+        console.log(omikuji);
+        if(omikuji == 0){
+            $("#result").html("大吉");
+        }else if(omikuji == 1){
+            $("#result").html("吉");
+        }else{
+            $("#result").html("凶");
+        }
+    });
+</script>
+</html>
